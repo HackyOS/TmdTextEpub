@@ -65,7 +65,7 @@ func init() {
 		author = "YSTYLE"
 		max = 35
 		match = DefaultMatchTips
-		Tips = true
+		Tips = false
 		lang = "zh"
 	} else {
 		flag.StringVar(&filename, "filename", "", "txt 文件名")
@@ -74,7 +74,7 @@ func init() {
 		flag.UintVar(&max, "max", 35, "标题最大字数")
 		flag.StringVar(&match, "match", DefaultMatchTips, "匹配标题的正则表达式, 不写可以自动识别, 如果没生成章节就参考教程。例: -match 第.{1,8}章 表示第和章字之间可以有1-8个任意文字")
 		flag.StringVar(&lang, "lang", "zh", "设置语言: en,de,fr,it,es,zh,ja,pt,ru,nl")
-		flag.BoolVar(&Tips, "tips", true, "添加本软件教程")
+		flag.BoolVar(&Tips, "tips", false, "添加本软件教程")
 		flag.Parse()
 	}
 }
